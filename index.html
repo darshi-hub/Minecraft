@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>HyperCraft — Hyperrealistic Voxel Survival</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="boot">
+    <div class="boot-card">
+      <div class="logo">HYPERCRAFT</div>
+      <div class="subtitle">A cinematic voxel survival sandbox</div>
+      <div class="boot-line">Generating terrain, lighting, biomes and wildlife…</div>
+      <button id="start">ENTER WORLD</button>
+      <div class="hint">Desktop: WASD • mouse • Space • Shift • E • Q • F</div>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div id="crosshair">+</div>
+    <div id="top">
+      <div class="pill" id="dimension">OVERWORLD</div>
+      <div class="pill" id="clock">DAY 08:00</div>
+      <div class="pill" id="biome">PLAINS</div>
+    </div>
+
+    <div id="status">
+      <div class="bars">
+        <div class="bar"><span>HEALTH</span><i id="health"></i></div>
+        <div class="bar"><span>HUNGER</span><i id="hunger"></i></div>
+        <div class="bar"><span>AIR</span><i id="air"></i></div>
+      </div>
+      <div id="coords">0, 0, 0</div>
+    </div>
+
+    <div id="mine-wrap"><div id="mine-progress"></div><div id="mine-label"></div></div>
+
+    <div id="hotbar"></div>
+
+    <div id="hintbar">LMB mine/attack • RMB place • E inventory/crafting • Q drop • F toggle flight • N new seed • P portal test</div>
+  </div>
+
+  <div id="inventory" class="panel hidden">
+    <div class="panel-head"><b>INVENTORY & CRAFTING</b><button id="closeInv">×</button></div>
+    <div class="inv-layout">
+      <div>
+        <div class="section-title">BACKPACK</div>
+        <div id="grid" class="grid"></div>
+      </div>
+      <div class="crafting">
+        <div class="section-title">CRAFTING</div>
+        <div id="recipe-list"></div>
+        <div id="craft-msg"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="death" class="panel hidden">
+    <div class="death-title">YOU DIED</div>
+    <div id="death-reason"></div>
+    <button id="respawn">RESPAWN</button>
+  </div>
+
+  <div id="toast"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
