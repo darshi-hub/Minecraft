@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>VoxelCraft Ultra — Hyperrealistic Voxel Sandbox</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game"></div>
+  <div id="vignette"></div>
+  <div id="crosshair"><i></i><i></i><i></i><i></i></div>
+
+  <div id="hud">
+    <div id="topbar">
+      <div class="brand">VOXELCRAFT <span>ULTRA</span></div>
+      <div id="biomeLabel">GENERATING WORLD…</div>
+      <div id="clock">DAY 1 · 12:00</div>
+    </div>
+    <div id="stats">
+      <div class="bar health"><b>♥</b><div><span id="healthFill"></span></div></div>
+      <div class="bar food"><b>●</b><div><span id="foodFill"></span></div></div>
+      <div class="bar oxygen"><b>O₂</b><div><span id="oxygenFill"></span></div></div>
+      <div id="modeBadge">SURVIVAL</div>
+    </div>
+    <div id="targetInfo"></div>
+  </div>
+
+  <div id="hotbar"></div>
+
+  <div id="hint">WASD move · SPACE jump/swim · SHIFT sprint · LMB mine/attack · RMB place · E inventory · Q drop item · 1–9 select</div>
+
+  <div id="inventory" class="panel hidden">
+    <div class="panelHead"><h2>INVENTORY & CRAFTING</h2><button id="closeInv">×</button></div>
+    <div class="inventoryLayout">
+      <div>
+        <h3>CRAFTING</h3>
+        <div id="craftGrid" class="craftGrid"></div>
+        <div id="recipeList"></div>
+      </div>
+      <div>
+        <h3>BACKPACK</h3>
+        <div id="backpack" class="slotGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pause" class="panel hidden">
+    <h1>WORLD PAUSED</h1>
+    <p>Click to resume</p>
+    <button id="resume">RESUME</button>
+  </div>
+
+  <div id="death" class="panel hidden">
+    <h1>YOU DIED</h1>
+    <p id="deathReason">The world awaits your return.</p>
+    <button id="respawn">RESPAWN</button>
+  </div>
+
+  <div id="mobileControls">
+    <div id="joy"><div id="knob"></div></div>
+    <div class="mobileBtns"><button data-key="Space">↑</button><button data-key="ShiftLeft">RUN</button><button id="mobileInv">INV</button></div>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
